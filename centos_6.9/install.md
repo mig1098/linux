@@ -7,9 +7,13 @@ handle instalation
 
 vi /etc/sysconfig/network-scripts/ifcfg-eth0
 
+
 DEVICE="eth0"
+
 NM_CONTROLLED="yes"
+
 ONBOOT=yes
+
 HWADDR=A4:BA:DB:37:F1:04
 TYPE=Ethernet
 BOOTPROTO=static

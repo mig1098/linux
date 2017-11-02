@@ -1,11 +1,11 @@
 handle instalation
 
 
-#Static ip
+## Static ip
 
 ## Configure eth0
-#
-# vi /etc/sysconfig/network-scripts/ifcfg-eth0
+
+vi /etc/sysconfig/network-scripts/ifcfg-eth0
 
 DEVICE="eth0"
 NM_CONTROLLED="yes"
@@ -19,23 +19,25 @@ IPADDR=192.168.1.44
 NETMASK=255.255.255.0
 
 
-## Configure Default Gateway
+#### Configure Default Gateway
 #
-# vi /etc/sysconfig/network
+vi /etc/sysconfig/network
 
 NETWORKING=yes
 HOSTNAME=centos6
 GATEWAY=192.168.1.1
 
 
-## Restart Network Interface
+### Restart Network Interface
 #
 
 /etc/init.d/network restart
+or
+service network restart
 
-## Configure DNS Server
+### Configure DNS Server
 #
-# vi /etc/resolv.conf
+vi /etc/resolv.conf
 
 nameserver 8.8.8.8      # Replace with your nameserver ip
 nameserver 192.168.1.1  # Replace with your nameserver ip

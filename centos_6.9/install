@@ -49,4 +49,12 @@ nameserver 192.168.1.1  # Replace with your nameserver ip
 yum update
 
 
+### install ftp service
+
+# service
+sudo yum install vsftpd
+# client
+sudo yum install ftp
+
+
 

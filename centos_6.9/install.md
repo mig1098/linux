@@ -1,9 +1,9 @@
 handle instalation
 
 
-## Static ip
+## STATIC IP ##
 
-## Configure eth0
+### Configure eth0
 
 vi /etc/sysconfig/network-scripts/ifcfg-eth0
 

@@ -13,3 +13,8 @@ find / -name httpd.conf
  <Directory "/var/www/html">
    AllowOverride All   <-- this line only change to 'All'
  </Directory>
+ 
+ Affect only a folder
+ <Directory "/var/www/html/folder">
+   AllowOverride All  
+ </Directory>

@@ -1,3 +1,15 @@
 
 # Search a file
-find / -name file.look
+find / -name file.look  
+example
+cd /etc
+find / -name httpd.conf  
+
+#for htaccess configure on apache 
+ cd /etc/httpd/conf
+ vim httpd.conf
+ 
+ search and rewrite only the line
+ <Directory "/var/www/html">
+   AllowOverride All   <-- this line only change to 'All'
+ </Directory>

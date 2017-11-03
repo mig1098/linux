@@ -1,0 +1,3 @@
+
+#Searcha a file
+find / -name file.look

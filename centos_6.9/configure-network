@@ -1,0 +1,17 @@
+# restart network
+/etc/init.d/network restart
+
+$ cd /etc/sysconfig/network-scritps
+# At least this files must be in
+ifcfg-eth0
+ifcfg-lo
+
+#
+ifdown eth1
+ifup eth1
+
+check ethernet controllers
+ls /sys/class/net
+
+#check mac for card network with eth0 o eth1 o eth2 etc
+$ cat /etc/udev/rules.d/70-persistent-net.rules

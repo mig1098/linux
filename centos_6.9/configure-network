@@ -14,4 +14,5 @@ check ethernet controllers
 ls /sys/class/net
 
 #check mac for card network with eth0 o eth1 o eth2 etc
+#check HWADDR asigned to eth*
 $ cat /etc/udev/rules.d/70-persistent-net.rules

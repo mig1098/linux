@@ -1,2 +1,6 @@
 ### view process on especific port
 watch -n 1 "netstat -punta | grep 3001"
+
+### rastero de procesos
+ps -aux | grep yum
+kill [proceess id]

@@ -1,1 +1,29 @@
+
 .........
+
+.. install apache, mariadb php 7
+
+yum -y update
+
+yum -y install httpd
+
+yum install mariadb-server mariadb-client
+
+rapberry pi centos install php 7
+
+
+yum groupinstall "Development tools"
+
+yum install gcc gcc-c++ rpm-build automake autoconf
+
+yum install gcc libxml2-devel pkgconfig openssl-devel bzip2-devel libpng-devel libpng-devel libjpeg-devel libXpm-devel freetype-devel gmp-devel libmcrypt-devel mariadb-devel aspell-devel recode-devel httpd-devel
+
+tar -xvzf php-7.2.3.tar.gz
+mv php-7.2.3 /opt
+cd php-7.2.3
+
+./configure 
+
+make test
+
+make install

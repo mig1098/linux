@@ -7,23 +7,49 @@ yum -y update
 
 yum -y install httpd
 
+# sudo firewall-cmd --permanent --add-port=80/tcp
+# sudo firewall-cmd --permanent --add-port=443/tcp
+# sudo firewall-cmd --reload
+
 yum install mariadb-server mariadb-client
 
-rapberry pi centos install php 7
+# mysql_secure_installation
 
 
-yum groupinstall "Development tools"
+----------------------------------
+- install php 7 on armv centos
+----------------------------------
+
+yum groupinstall "Development tools"  --> opcional
 
 yum install gcc gcc-c++ rpm-build make automake autoconf
 
+cat > /etc/yum.repos.d/epel.repo << EOF
+[epel]
+name=Epel rebuild for armhfp
+baseurl=https://armv7.dev.centos.org/repodir/epel-pass-1/
+enabled=1
+gpgcheck=0
+EOF
+
+# yum install epel-release
+
+cat > /etc/yum.repos.d/php72-testing.repo << EOF
+[php72-testing]
+name=Remi php72 rebuild for armhfp
+baseurl=https://armv7.dev.centos.org/repodir/community-php72-testing/
+enabled=1
+gpgcheck=0
+EOF
+
+cat > /etc/yum.repos.d/remi.repo << EOF
+[remi]
+name=Remi's RPM repository for Enterprise Linux 7 - $basearch
+mirrorlist=http://cdn.remirepo.net/enterprise/7/remi/mirror
+enabled=1
+gpgcheck=1
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi
+EOF
+
 yum install gcc libxml2-devel pkgconfig openssl-devel bzip2-devel libpng-devel libpng-devel libjpeg-devel libXpm-devel freetype-devel gmp-devel libmcrypt-devel mariadb-devel aspell-devel recode-devel httpd-devel
 
-tar -xvzf php-7.2.3.tar.gz
-mv php-7.2.3 /opt
-cd php-7.2.3
-
-./configure 
-
-make test
-
-make install

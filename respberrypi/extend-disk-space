@@ -1,4 +1,4 @@
-''' Manual Expand RootFS
+Manual Expand RootFS
 
 There is a /README file that describes remaining steps to complete the Raspbery PI 3 setup including how to expand the root (/) partition to capacity of the media. I tried it and it resulted in a kernel panic.
 
